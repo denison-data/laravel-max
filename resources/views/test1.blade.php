@@ -5,12 +5,12 @@
 
 <p>@{{ $name }}</p>
 <p> 지금은 {{ now() }} 입니다. </p>
-
+<p> 테스트 이름 : {{!! $testname !!}}</p>
 @for ($i = 0; $i < 10; $i++)
     <p>숫자 증가 : {{ $i }}</p>
 @endfor
 
-@includeIf('inc/incd')
+@includeIf('inc.sub')
 
 @php
     $a = 10;

@@ -1,0 +1,1 @@
+인클루드 파일임 (inc/sub.blade.php)

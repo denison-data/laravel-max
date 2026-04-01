@@ -6,8 +6,9 @@
     <title>사용자</title>
 </head>
 <body>
-    <h1>사용자</h1>
+    <h1>사용자 보기</h1>
     <p>Name : {{ $name }}</p>
     <p>Age : {{ $age }}</p>
+    <p>Memo : {{ $memo }}</p>
 </body>
 </html>
