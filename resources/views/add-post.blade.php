@@ -29,6 +29,7 @@
 
         <div class="mt-2">
             <button type="submit" class="btn btn-primary mt-3">등록</button>
+            <a href="{{ route('posts.getAllPost') }}" class="btn btn-secondary mt-3">목록</a>
         </div>
     </form>
 
