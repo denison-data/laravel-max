@@ -11,4 +11,19 @@ class LoginController extends Controller
     {
         return view('login');
     }
+
+    public function loginSubmit(Request $request)
+    {
+        $validationData = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6|max:12'
+        ]);
+        
+       // return $request->all();
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        return "이메일 : " . $email . "<br>비밀번호 : " . $password;
+
+    }
 }
