@@ -63,4 +63,13 @@ class PostController extends Controller
         DB::table('posts')->where('id', $id)->delete();
         return back()->with('post_deleted', '게시물이 성공적으로 삭제되었습니다.');
     }
+
+    public function innerJoinClause()
+    {
+        $result = DB::table('users')
+            ->select('users.name', 'posts.subject', 'posts.content', 'users.email')
+            ->join('posts', 'users.id', '=', 'posts.user_id')
+            ->get();
+        return $result;
+    }
 }
