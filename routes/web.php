@@ -50,7 +50,7 @@ Route::get('/session/store', [SessionController::class, 'storeSessionData']) -> 
 Route::get('/session/delete', [SessionController::class, 'deleteSessionData']) -> name('session.delete');
 
 Route::get('/posts', [PostController::class, 'getAllPost']) -> name('posts.getAllPost');
-Route::get('/add-post', [PostController::class, 'addPost']) -> name('posts.addPost');
+Route::get('/add-post', [PostController::class, 'addPost']) -> name('posts.add');
 Route::post('/add-post', [PostController::class, 'addPostSubmit']) -> name('posts.addSubmit');
 Route::get('/posts/{id}', [PostController::class, 'getPostById']) -> name('posts.getPostById'); 
 Route::get('/edit-post/{id}', [PostController::class, 'editPost']) -> name('posts.edit');

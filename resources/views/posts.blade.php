@@ -38,5 +38,7 @@
         @endforeach
     </table>
 </div>
+<div class="container w-50 mt-3">
+    <a href="{{ route('posts.add') }}" class="btn btn-primary">글쓰기</a>
 </body>
 </html>
