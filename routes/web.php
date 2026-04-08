@@ -58,3 +58,5 @@ Route::post('/update-post', [PostController::class, 'updatePost']) -> name('post
 Route::get('/delete-post/{id}', [PostController::class, 'deletePost']) -> name('posts.delete');
 
 Route::get('/inner-join', [PostController::class, 'innerJoinClause']) -> name('posts.innerJoin');
+
+Route::get('/all-posts', [PostController::class, 'getAllPostsUsingModel']) -> name('posts.getAllPostsUsingModel');

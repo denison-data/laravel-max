@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -66,10 +67,17 @@ class PostController extends Controller
 
     public function innerJoinClause()
     {
-        $result = DB::table('users')
-            ->select('users.name', 'posts.subject', 'posts.content', 'users.email')
+        $posts = DB::table('users')
+            ->select('posts.id', 'users.name', 'posts.subject', 'posts.content', 'users.email')
             ->join('posts', 'users.id', '=', 'posts.user_id')
             ->get();
-        return $result;
+        return view('join-view', compact('posts'));
+    }
+
+    public function getAllPostsUsingModel()
+    {
+        $posts = Post::all();
+
+        return view('all-view', compact('posts'));
     }
 }
